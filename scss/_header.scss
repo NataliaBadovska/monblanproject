@@ -315,4 +315,11 @@
     padding: 0 10px 10px 10px;
     flex-wrap: wrap;
   }
+
+  .flatpickr-calendar {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 92vw !important;
+    max-width: 320px !important;
+  }
 }
