@@ -1,7 +1,7 @@
 const postData = [
   {
     id: 1,
-    mediaUrl: './images/Rectangle-20.jpg',
+    mediaUrl: 'images/Rectangle-20.jpg',
     status: 'Today',
     likes: 128,
     comments1: 31,
@@ -12,7 +12,7 @@ const postData = [
   },
   {
     id: 2,
-    mediaUrl: './images/Rectangle-21.jpg',
+    mediaUrl: 'images/Rectangle-21.jpg',
     status: 'Today',
     likes: 128,
     comments1: 31,
@@ -23,7 +23,7 @@ const postData = [
   },
   {
     id: 3,
-    mediaUrl: './images/Rectangle-22.jpg',
+    mediaUrl: 'images/Rectangle-22.jpg',
     status: 'Today',
     likes: 128,
     comments1: 31,
@@ -34,7 +34,7 @@ const postData = [
   },
   {
     id: 4,
-    mediaUrl: './images/Rectangle-23.jpg',
+    mediaUrl: 'images/Rectangle-23.jpg',
     status: 'Today',
     likes: 128,
     comments1: 31,
@@ -45,7 +45,7 @@ const postData = [
   },
   {
     id: 5,
-    mediaUrl: './images/Rectangle-24.jpg',
+    mediaUrl: 'images/Rectangle-24.jpg',
     status: 'Today',
     likes: 128,
     comments1: 31,
@@ -56,7 +56,7 @@ const postData = [
   },
   {
     id: 6,
-    mediaUrl: './images/Rectangle-25.jpg',
+    mediaUrl: 'images/Rectangle-25.jpg',
     status: 'Today',
     likes: 128,
     comments1: 31,
@@ -67,7 +67,7 @@ const postData = [
   },
   {
     id: 7,
-    mediaUrl: './images/Rectangle-26.jpg',
+    mediaUrl: 'images/Rectangle-26.jpg',
     status: 'Today',
     likes: 128,
     comments1: 31,
@@ -78,7 +78,7 @@ const postData = [
   },
   {
     id: 8,
-    mediaUrl: './images/Rectangle-27.jpg',
+    mediaUrl: 'images/Rectangle-27.jpg',
     status: 'Today',
     likes: 128,
     comments1: 31,
@@ -89,7 +89,7 @@ const postData = [
   },
   {
     id: 9,
-    mediaUrl: './images/Rectangle-28.jpg',
+    mediaUrl: 'images/Rectangle-28.jpg',
     status: 'Today',
     likes: 128,
     comments1: 31,
