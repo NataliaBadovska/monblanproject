@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -62,6 +63,16 @@ body {
   color: #3d8eda;
 }
 
+@media (max-width: 1024px) {
+  .switcher-container {
+    padding: 18px 30px;
+  }
+}
+@media (max-width: 767px) {
+  .switcher-container {
+    display: none;
+  }
+}
 .header-container {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -190,11 +201,8 @@ body {
 }
 
 .calendar-toggle {
-  width: 24px;
-  height: 24px;
   border: none;
   background-color: #dedede;
-  font-size: 18px;
   cursor: pointer;
 }
 
@@ -284,6 +292,111 @@ body {
   left: 0;
 }
 
+/* ================================================= */
+/* ============== АДАПТИВНІ СТИЛІ (МЕДІАЗАПИТИ) ============== */
+/* ================================================= */
+/* --- 1. Планшети та пристрої з меншою шириною (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  /* Робимо заголовок більш компактним для планшетів */
+  .profile-header {
+    padding: 25px 0 15px 0;
+  }
+  /* Зменшуємо розмір заголовка */
+  .profile-header .profile-title {
+    font-size: 22px;
+  }
+  /* Зменшуємо внутрішні відступи в фільтрах */
+  .date-range {
+    gap: 20px;
+  }
+  .date-picker {
+    width: 180px;
+  }
+  /* Зменшуємо відступи у статистиці */
+  .stats {
+    gap: 15px;
+  }
+  .header-decorate {
+    width: 340px;
+    height: auto;
+  }
+}
+/* --- 2. Мобільні пристрої (Mobile, max-width: 767px) --- */
+@media (max-width: 767px) {
+  /*
+     * 1. HEADER CONTAINER
+     * Перебудовуємо на вертикальний стовпець, якщо потрібно,
+     * або центруємо елементи.
+     */
+  .header-container {
+    /* Якщо .header-container містить лого і контент, переводимо в стовпець */
+    grid-template-columns: 1fr; /* Один стовпець */
+    /* Додайте, якщо потрібно, щоб лого було над контентом */
+    /* display: block; */
+  }
+  .profile-header {
+    padding: 20px 10px 10px 10px;
+  }
+  .profile-header .profile-title {
+    font-size: 20px;
+  }
+  /*
+     * 2. ФІЛЬТРИ ДАТИ
+     * Переводимо горизонтальні елементи на вертикальні стовпці.
+     */
+  .profile-filters {
+    padding: 10px 0;
+  }
+  .date-filter-group {
+    flex-direction: column; /* Заголовок "Date" над полями */
+    align-items: flex-start;
+  }
+  .date-filter-group .date-title {
+    margin-right: 0;
+    margin-bottom: 8px; /* Відступ між заголовком і полями вводу */
+    align-self: flex-start;
+  }
+  .date-range {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  .date-picker {
+    width: 100%;
+  }
+  /*
+     * 3. КАЛЕНДАР (DatePicker Popup)
+     * Центруємо або робимо його більш компактним
+     */
+  .calendar-container {
+    /* Розміщення: можемо прибрати left: 0 і відцентрувати */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Робимо його відносно контейнера */
+    max-width: 300px; /* Обмежуємо максимальну ширину */
+    top: 55px; /* Зменшуємо відступ від поля вводу */
+  }
+  .calendar-table {
+    font-size: 13px; /* Трохи зменшуємо шрифт у календарі */
+  }
+  .calendar-table td {
+    padding: 4px 0; /* Зменшуємо відступи днів */
+  }
+  /*
+     * 4. ІНШІ ЕЛЕМЕНТИ
+     */
+  .username-wrapper {
+    flex-direction: column; /* Якщо потрібно розмістити ім'я та кнопку вертикально */
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .stats {
+    /* Залишаємо горизонтально, але з меншим проміжком */
+    gap: 10px;
+    padding: 0 10px 10px 10px;
+    flex-wrap: wrap; /* Дозволяємо переносити, якщо елементів багато */
+  }
+}
 .cards-section {
   position: relative;
   padding-bottom: 61px;
@@ -304,6 +417,25 @@ body {
   pointer-events: none;
 }
 
+@media (max-width: 1024px) {
+  .cards-section {
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .cards-section__decorate {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .cards-section {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .card__load-more {
+    margin: 20px auto;
+  }
+}
 .item {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -370,4 +502,57 @@ body {
   justify-content: space-between;
   grid-column: 1/-1;
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .item {
+    width: 100%;
+    max-width: 836px;
+    gap: 20px;
+    margin-bottom: 12px;
+  }
+  .item .item-details {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .grid-view {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .grid-view .item {
+    width: 100%;
+    /* width: auto; */
+  }
+  .grid-view .item-media img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .item .item-media {
+    width: 220px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .item .item-details {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
+  }
+  .stats-wrapper {
+    gap: 10px;
+  }
+  .grid-view {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .grid-view .upload-group {
+    flex-direction: column;
+    gap: 8px;
+  }
 }/*# sourceMappingURL=main.css.map */

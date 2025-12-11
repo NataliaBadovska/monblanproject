@@ -26,3 +26,15 @@
 .view-switcher button.active {
   color: #3d8eda;
 }
+
+@media (max-width: 1024px) {
+  .switcher-container {
+    padding: 18px 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .switcher-container {
+    display: none;
+  }
+}

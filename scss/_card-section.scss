@@ -17,3 +17,26 @@
 
   pointer-events: none;
 }
+
+@media (max-width: 1024px) {
+  .cards-section {
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cards-section__decorate {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .cards-section {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  .card__load-more {
+    margin: 20px auto;
+  }
+}
