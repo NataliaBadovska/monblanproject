@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  background-color: #f4f4f4;
+  color: #000000;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.btn {
+  cursor: pointer;
+  &:focus {
+    outline: 1px dashed $color-primary;
+  }
+}

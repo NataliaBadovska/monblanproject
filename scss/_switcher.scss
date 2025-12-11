@@ -1,0 +1,28 @@
+.switcher-container {
+  padding: 18px 56px;
+}
+
+.view-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 10px;
+}
+
+.view-switcher button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: $color-text-light;
+  padding: 5px 10px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.view-switcher button:hover {
+  color: #999;
+}
+
+.view-switcher button.active {
+  color: #3d8eda;
+}

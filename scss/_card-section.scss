@@ -1,0 +1,19 @@
+.cards-section {
+  position: relative;
+  padding-bottom: 61px;
+}
+
+.card__load-more {
+  display: block;
+  margin: 33px auto;
+  width: fit-content;
+  text-align: center;
+}
+
+.cards-section__decorate {
+  position: absolute;
+  bottom: 41px;
+  right: 0;
+
+  pointer-events: none;
+}
