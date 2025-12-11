@@ -223,23 +223,15 @@
   left: 0;
 }
 
-/* ================================================= */
-/* ============== АДАПТИВНІ СТИЛІ (МЕДІАЗАПИТИ) ============== */
-/* ================================================= */
-
-/* --- 1. Планшети та пристрої з меншою шириною (max-width: 1024px) --- */
 @media (max-width: 1024px) {
-  /* Робимо заголовок більш компактним для планшетів */
   .profile-header {
     padding: 25px 0 15px 0;
   }
 
-  /* Зменшуємо розмір заголовка */
   .profile-header .profile-title {
     font-size: 22px;
   }
 
-  /* Зменшуємо внутрішні відступи в фільтрах */
   .date-range {
     gap: 20px;
   }
@@ -248,7 +240,6 @@
     width: 180px;
   }
 
-  /* Зменшуємо відступи у статистиці */
   .stats {
     gap: 15px;
   }
@@ -259,18 +250,9 @@
   }
 }
 
-/* --- 2. Мобільні пристрої (Mobile, max-width: 767px) --- */
 @media (max-width: 767px) {
-  /*
-     * 1. HEADER CONTAINER
-     * Перебудовуємо на вертикальний стовпець, якщо потрібно,
-     * або центруємо елементи.
-     */
   .header-container {
-    /* Якщо .header-container містить лого і контент, переводимо в стовпець */
-    grid-template-columns: 1fr; /* Один стовпець */
-    /* Додайте, якщо потрібно, щоб лого було над контентом */
-    /* display: block; */
+    grid-template-columns: 1fr;
   }
 
   .profile-header {
@@ -281,22 +263,18 @@
     font-size: 20px;
   }
 
-  /*
-     * 2. ФІЛЬТРИ ДАТИ
-     * Переводимо горизонтальні елементи на вертикальні стовпці.
-     */
   .profile-filters {
     padding: 10px 0;
   }
 
   .date-filter-group {
-    flex-direction: column; /* Заголовок "Date" над полями */
+    flex-direction: column;
     align-items: flex-start;
   }
 
   .date-filter-group .date-title {
     margin-right: 0;
-    margin-bottom: 8px; /* Відступ між заголовком і полями вводу */
+    margin-bottom: 8px;
     align-self: flex-start;
   }
 
@@ -310,40 +288,31 @@
     width: 100%;
   }
 
-  /*
-     * 3. КАЛЕНДАР (DatePicker Popup)
-     * Центруємо або робимо його більш компактним
-     */
   .calendar-container {
-    /* Розміщення: можемо прибрати left: 0 і відцентрувати */
     left: 50%;
     transform: translateX(-50%);
-    width: 90%; /* Робимо його відносно контейнера */
-    max-width: 300px; /* Обмежуємо максимальну ширину */
-    top: 55px; /* Зменшуємо відступ від поля вводу */
+    width: 90%;
+    max-width: 300px;
+    top: 55px;
   }
 
   .calendar-table {
-    font-size: 13px; /* Трохи зменшуємо шрифт у календарі */
+    font-size: 13px;
   }
 
   .calendar-table td {
-    padding: 4px 0; /* Зменшуємо відступи днів */
+    padding: 4px 0;
   }
 
-  /*
-     * 4. ІНШІ ЕЛЕМЕНТИ
-     */
   .username-wrapper {
-    flex-direction: column; /* Якщо потрібно розмістити ім'я та кнопку вертикально */
+    flex-direction: column;
     gap: 10px;
     margin-bottom: 10px;
   }
 
   .stats {
-    /* Залишаємо горизонтально, але з меншим проміжком */
     gap: 10px;
     padding: 0 10px 10px 10px;
-    flex-wrap: wrap; /* Дозволяємо переносити, якщо елементів багато */
+    flex-wrap: wrap;
   }
 }
